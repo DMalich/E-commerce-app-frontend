@@ -1,0 +1,83 @@
+.order-container .order-row:first-child .order-col {
+    padding: 50px 0;
+}
+
+.order-title {
+    text-align: center;
+    letter-spacing: 1.3px;
+}
+
+.order-cards {
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.order-card {
+    width: 250px;
+    height: auto;
+    box-shadow: 0 0 10px #111111;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.order-header {
+    text-align: center;
+    margin-bottom: 20px;
+    min-height: 150px;
+}
+
+.order-items {
+    margin-bottom: 5px;
+}
+
+.order-varient {
+    border-radius: 5px;
+    background-color: #2c3e50;
+    padding: 2px 5px;
+    color: #ffffff;
+    letter-spacing: 1.3px;
+}
+
+.order-body {
+    min-height: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.order-footer {
+    min-height: 50px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.order-footer p {
+    margin-bottom: 5px;
+}
+
+.order-date-title {
+    margin-top: 20px;
+}
+
+.order-date,
+.order-amount {
+    font-size: 20px;
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.order-address {
+    margin-bottom: 5px;
+}
+
+.order-address-span {
+    background-color: #2c3e50;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 2px 5px;
+    border-radius: 5px;
+    letter-spacing: 1.3px;
+}
