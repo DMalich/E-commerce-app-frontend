@@ -1,5 +1,5 @@
 export const addToCart = (pizza, quantity, size) => (dispatch, getState) => {
-    var cartItems = {
+    let cartItems = {
         name: pizza.name,
         _id: pizza._id,
         size: size,
@@ -18,7 +18,6 @@ export const addToCart = (pizza, quantity, size) => (dispatch, getState) => {
             dispatch({ type: "ADD_TO_CART", payload: cartItems });
         }
     }
-
 
     const cartItem = getState().cartReducer.cartItems;
 

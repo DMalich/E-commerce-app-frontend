@@ -1,8 +1,8 @@
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { filterPizzas } from "../../actions/pizzaActions.js";
 import "./filter.css";
-
-import React, { useState } from "react";
+import Dropdown from 'react-bootstrap/Dropdown';
 
 const Filter = () => {
     const dispatch = useDispatch();
@@ -18,7 +18,7 @@ const Filter = () => {
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                     className="filter-input"
-                    placeholder="Search ..."
+                    placeholder="Search..."
                 />
             </div>
             <div className="filter-col">
@@ -35,6 +35,27 @@ const Filter = () => {
                     </select>
                 </div>
             </div>
+            <Dropdown>
+                <Dropdown.Toggle
+                    id="dropdown-button-dark-example1"
+                    variant="secondary"
+                    value={category}
+                    onChange={(e) => setCategory(e.target.value)}
+                >
+                    Categories
+                </Dropdown.Toggle>
+                <Dropdown.Menu variant='dark'>
+                    <Dropdown.Item value='all'>
+                        All pizzas
+                    </Dropdown.Item>
+                    <Dropdown.Item value='category 1'>
+                        Category 1
+                    </Dropdown.Item>
+                    <Dropdown.Item value='category 2'>
+                        Category 2
+                    </Dropdown.Item>
+                </Dropdown.Menu>
+            </Dropdown>
             <div className="filter-col">
                 <button
                     className="filter-btn"

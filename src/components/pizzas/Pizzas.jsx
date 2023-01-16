@@ -21,15 +21,12 @@ const Pizzas = () => {
             <div className="pizzas-row">
                 <div className="pizzas-col">
                     <div className="pizzas-cards">
-                        {loading ? (
-                            <h2 className="loading">Loading...</h2>
-                        ) : error ? (
-                            <h2 className="error">Error...</h2>
-                        ) : (
-                            pizzas?.map((pizza) => {
+                        {loading ? (<h2 className="loading">Loading...</h2>) : error
+                            ? (<h2 className="error">Error...</h2>)
+                            : (pizzas?.map((pizza) => {
                                 return <Pizza pizza={pizza} />;
                             })
-                        )} 
+                            )}
                     </div>
                 </div>
             </div>

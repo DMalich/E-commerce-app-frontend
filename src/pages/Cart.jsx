@@ -16,11 +16,11 @@ const Cart = () => {
     const cartState = useSelector((state) => state.cartReducer);
     const cartItems = cartState.cartItems;
 
-    const navigate = useNavigate;
+    const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    var totalPrice = cartItems.reduce((x, item) => x + item.price, 0);
-    
+    let totalPrice = cartItems.reduce((x, item) => x + item.price, 0);
+
     function checkoutHandler() {
         if (totalPrice > 0) {
             navigate("/checkoutdetails");

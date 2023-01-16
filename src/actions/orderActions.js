@@ -6,10 +6,10 @@ export const placeOrder = () => async (dispatch, getState) => {
     const currentUser = getState().loginUserReducer.currentUser;
     const cartItems = getState().cartReducer.cartItems;
 
-    var reducePrice = cartItems.reduce((x, item) => x + item.price, 0);
-    var totalPrice = reducePrice.toFixed(2);
+    let reducePrice = cartItems.reduce((x, item) => x + item.price, 0);
+    let totalPrice = reducePrice.toFixed(2);
 
-    var shippingAddress = localStorage.getItem("shippingAddress");
+    let shippingAddress = localStorage.getItem("shippingAddress");
 
     try {
         const res = await axios.post("/api/orders/placeorders", {

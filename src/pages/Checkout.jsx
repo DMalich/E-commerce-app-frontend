@@ -21,7 +21,7 @@ function Checkout() {
             alert("Fields are empty!");
         } else {
             const { data } = axios.post(
-                "/api/orders/placeorders",
+                "/api/orders/placeorders/",
                 {
                     name: name,
                     email: email,

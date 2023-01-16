@@ -1,9 +1,11 @@
 import React from "react";
 import "./preview.css";
+import CloseButton from 'react-bootstrap/CloseButton';
 
 function Preview({ handleClose, pizza }) {
     return (
         <div className="preview-container">
+            <CloseButton/>
             <div className="preview-row">
                 <div className="preview-col">
                     <h3 className="preview-title">{pizza.name}</h3>
