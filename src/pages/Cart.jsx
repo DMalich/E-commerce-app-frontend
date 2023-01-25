@@ -37,7 +37,7 @@ const Cart = () => {
             </div>
             <div className="cart-row">
                 <div className="cart-col">
-                    {cartItems.map((item) => {
+                    {cartItems.map((item) => (
                         <div className="cart-card">
                             <div className="cart-header">
                                 <h2 className="cart-subTitle">{item.name}</h2>
@@ -97,8 +97,8 @@ const Cart = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>;
-                    })}
+                        </div>
+                    ))}
                 </div>
                 <div className="cart-col">
                     <div className="cartTotal">
